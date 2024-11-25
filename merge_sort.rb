@@ -3,7 +3,7 @@
 def merge_sort(array)
   # print "\narray : #{array}\n"
 
-  return array if array.length == 1
+  return array if array.length <= 1
 
   middle_index = array.length / 2
 
