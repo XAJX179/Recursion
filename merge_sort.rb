@@ -23,11 +23,11 @@ def merge(left, right)
   # print "\nmerge function\n"
   sorted = []
   until left.empty? || right.empty?
-    if left[0] <= right[0]
-      sorted << left.shift
-    elsif right[0] <= left[0]
-      sorted << right.shift
-    end
+    sorted << if left.first <= right.first
+                left.shift
+              else
+                right.shift
+              end
   end
   sorted + left + right
 end
